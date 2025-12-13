@@ -1,0 +1,1652 @@
+[
+  {
+    "path": "/sm-contexts",
+    "method": "POST",
+    "summary": "Create SM Context",
+    "description": null,
+    "operationId": "PostSmContexts",
+    "tags": [
+      "SM contexts collection"
+    ],
+    "responses": {
+      "201": {
+        "description": "successful creation of an SM context",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreatedData"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreatedData"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "headers": {
+          "Location": {
+            "description": "Contains the URI of the newly created resource, according to the structure: {apiRoot}/nsmf-pdusession/<apiVersion>/sm-contexts/{smContextRef}\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "description": "unsuccessful creation of an SM context - bad request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "$ref": "#/components/responses/401"
+      },
+      "403": {
+        "description": "unsuccessful creation of an SM context - forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "unsuccessful creation of an SM context - not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreateError"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "#/components/responses/413"
+      },
+      "415": {
+        "$ref": "#/components/responses/415"
+      },
+      "429": {
+        "$ref": "#/components/responses/429"
+      },
+      "500": {
+        "description": "unsuccessful creation of an SM context - internal server error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "502": {
+        "description": "unsuccessful creation of an SM context \u00e2\u20ac\u201c Bad Gateway",
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/ExtProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "unsuccessful creation of an SM context - service unavailable",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "504": {
+        "description": "unsuccessful creation of an SM context - gateway timeout",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextCreateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextCreateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmMessage": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/sm-contexts/{smContextRef}/retrieve",
+    "method": "POST",
+    "summary": "Retrieve SM Context",
+    "description": null,
+    "operationId": "RetrieveSmContext",
+    "tags": [
+      "Individual SM context"
+    ],
+    "responses": {
+      "200": {
+        "description": "successful retrieval of an SM context",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextRetrievedData"
+            }
+          }
+        }
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/400"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/403"
+      },
+      "404": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/404"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/500"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/503"
+      },
+      "504": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/504"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/sm-contexts/{smContextRef}/modify",
+    "method": "POST",
+    "summary": "Update SM Context",
+    "description": null,
+    "operationId": "UpdateSmContext",
+    "tags": [
+      "Individual SM context"
+    ],
+    "responses": {
+      "200": {
+        "description": "successful update of an SM context with content in the response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdatedData"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdatedData"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "204": {
+        "description": "successful update of an SM context without content in the response"
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "description": "unsuccessful update of an SM context - bad request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "$ref": "#/components/responses/401"
+      },
+      "403": {
+        "description": "unsuccessful update of an SM context - forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "unsuccessful update of an SM context - not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdateError"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "#/components/responses/413"
+      },
+      "415": {
+        "$ref": "#/components/responses/415"
+      },
+      "429": {
+        "$ref": "#/components/responses/429"
+      },
+      "500": {
+        "description": "unsuccessful update of an SM context - Internal server error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "502": {
+        "description": "unsuccessful update of an SM context \u00e2\u20ac\u201c Bad Gateway",
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/ExtProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "unsuccessful update of an SM context - Service Unavailable",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "504": {
+        "description": "unsuccessful update of an SM context - gateway timeout",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextUpdateError"
+            }
+          },
+          "application/problem+json": {
+            "schema": {
+              "$ref": "TS29571_CommonData.yaml#/components/schemas/ProblemDetails"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/SmContextUpdateError"
+                },
+                "binaryDataN1SmMessage": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN2SmInformation": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmMessage": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN2SmInformation": {
+                "contentType": "application/vnd.3gpp.ngap",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/sm-contexts/{smContextRef}/release",
+    "method": "POST",
+    "summary": "Release SM Context",
+    "description": null,
+    "operationId": "ReleaseSmContext",
+    "tags": [
+      "Individual SM context"
+    ],
+    "responses": {
+      "200": {
+        "description": "successful release of a PDU session with content in the response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SmContextReleasedData"
+            }
+          }
+        }
+      },
+      "204": {
+        "description": "successful release of an SM context without content in the response"
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/400"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/403"
+      },
+      "404": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/404"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/500"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/503"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/sm-contexts/{smContextRef}/send-mo-data",
+    "method": "POST",
+    "summary": "Send MO Data",
+    "description": null,
+    "operationId": "SendMoData",
+    "tags": [
+      "Individual SM context"
+    ],
+    "responses": {
+      "204": {
+        "description": "successful sending of MO data"
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "#/components/responses/400"
+      },
+      "401": {
+        "$ref": "#/components/responses/401"
+      },
+      "403": {
+        "$ref": "#/components/responses/403"
+      },
+      "404": {
+        "$ref": "#/components/responses/404"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "#/components/responses/413"
+      },
+      "415": {
+        "$ref": "#/components/responses/415"
+      },
+      "429": {
+        "$ref": "#/components/responses/429"
+      },
+      "500": {
+        "$ref": "#/components/responses/500"
+      },
+      "502": {
+        "$ref": "#/components/responses/502"
+      },
+      "503": {
+        "$ref": "#/components/responses/503"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/pdu-sessions",
+    "method": "POST",
+    "summary": "Create",
+    "description": null,
+    "operationId": "PostPduSessions",
+    "tags": [
+      "PDU sessions collection"
+    ],
+    "responses": {
+      "201": {
+        "description": "successful creation of a PDU session",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PduSessionCreatedData"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/PduSessionCreatedData"
+                },
+                "binaryDataN1SmInfoToUe": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmInfoToUe": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "headers": {
+          "Location": {
+            "description": "Contains the URI of the newly created resource, according to the structure: {apiRoot}/nsmf-pdusession/<apiVersion>/pdu-sessions/{pduSessionRef}\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "#/components/responses/PduSessionCreateError"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "#/components/responses/PduSessionCreateError"
+      },
+      "404": {
+        "$ref": "#/components/responses/PduSessionCreateError"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "#/components/responses/PduSessionCreateError"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "#/components/responses/PduSessionCreateError"
+      },
+      "504": {
+        "$ref": "#/components/responses/PduSessionCreateError"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/pdu-sessions/{pduSessionRef}/modify",
+    "method": "POST",
+    "summary": "Update (initiated by V-SMF or I-SMF)",
+    "description": null,
+    "operationId": "UpdatePduSession",
+    "tags": [
+      "Individual PDU session (H-SMF or SMF)"
+    ],
+    "responses": {
+      "200": {
+        "description": "successful update of a PDU session with content in the response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/HsmfUpdatedData"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/HsmfUpdatedData"
+                },
+                "binaryDataN1SmInfoToUe": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN4Information": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN4InformationExt1": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN4InformationExt2": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN1SmInfoToUe": {
+                "contentType": "application/vnd.3gpp.5gnas",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN4Information": {
+                "contentType": "application/vnd.3gpp.pfcp",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN4InformationExt1": {
+                "contentType": "application/vnd.3gpp.pfcp",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN4InformationExt2": {
+                "contentType": "application/vnd.3gpp.pfcp",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "204": {
+        "description": "successful update of a PDU session without content in the response"
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "#/components/responses/HsmfUpdateError"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "#/components/responses/HsmfUpdateError"
+      },
+      "404": {
+        "$ref": "#/components/responses/HsmfUpdateError"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "#/components/responses/HsmfUpdateError"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "#/components/responses/HsmfUpdateError"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/pdu-sessions/{pduSessionRef}/release",
+    "method": "POST",
+    "summary": "Release",
+    "description": null,
+    "operationId": "ReleasePduSession",
+    "tags": [
+      "Individual PDU session (H-SMF or SMF)"
+    ],
+    "responses": {
+      "200": {
+        "description": "successful release of a PDU session with content in the response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ReleasedData"
+            }
+          },
+          "multipart/related": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jsonData": {
+                  "$ref": "#/components/schemas/ReleasedData"
+                },
+                "binaryDataN4Information": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN4InformationExt1": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "binaryDataN4InformationExt2": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "encoding": {
+              "jsonData": {
+                "contentType": "application/json"
+              },
+              "binaryDataN4Information": {
+                "contentType": "application/vnd.3gpp.pfcp",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN4InformationExt1": {
+                "contentType": "application/vnd.3gpp.pfcp",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "binaryDataN4InformationExt2": {
+                "contentType": "application/vnd.3gpp.pfcp",
+                "headers": {
+                  "Content-Id": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "204": {
+        "description": "successful release of a PDU session"
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/400"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/403"
+      },
+      "404": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/404"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/500"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/503"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/pdu-sessions/{pduSessionRef}/retrieve",
+    "method": "POST",
+    "summary": "Retrieve",
+    "description": null,
+    "operationId": "RetrievePduSession",
+    "tags": [
+      "Individual PDU session (H-SMF or SMF)"
+    ],
+    "responses": {
+      "200": {
+        "description": "successful information retrieval",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/RetrievedData"
+            }
+          }
+        }
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/400"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/403"
+      },
+      "404": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/404"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/500"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/503"
+      },
+      "504": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/504"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  },
+  {
+    "path": "/pdu-sessions/{pduSessionRef}/transfer-mo-data",
+    "method": "POST",
+    "summary": "Transfer MO Data",
+    "description": null,
+    "operationId": "TransferMoData",
+    "tags": [
+      "Individual PDU session (H-SMF or SMF)"
+    ],
+    "responses": {
+      "204": {
+        "description": "successful transfering of MO data"
+      },
+      "307": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/307"
+      },
+      "308": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/308"
+      },
+      "400": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/400"
+      },
+      "401": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/401"
+      },
+      "403": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/403"
+      },
+      "404": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/404"
+      },
+      "411": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/411"
+      },
+      "413": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/413"
+      },
+      "415": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/415"
+      },
+      "429": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/429"
+      },
+      "500": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/500"
+      },
+      "502": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/502"
+      },
+      "503": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/503"
+      },
+      "default": {
+        "$ref": "TS29571_CommonData.yaml#/components/responses/default"
+      }
+    }
+  }
+]

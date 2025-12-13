@@ -1,0 +1,232 @@
+{
+  "http_method_count": {
+    "POST": 10
+  },
+  "endpoints_with_responses": 10,
+  "endpoints_without_responses": 0,
+  "authentication_methods": [
+    "oAuth2ClientCredentials"
+  ],
+  "request_response_map": [
+    {
+      "path": "/sm-contexts",
+      "method": "POST",
+      "responses": [
+        "201",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "504",
+        "default"
+      ]
+    },
+    {
+      "path": "/sm-contexts/{smContextRef}/retrieve",
+      "method": "POST",
+      "responses": [
+        "200",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "504",
+        "default"
+      ]
+    },
+    {
+      "path": "/sm-contexts/{smContextRef}/modify",
+      "method": "POST",
+      "responses": [
+        "200",
+        "204",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "504",
+        "default"
+      ]
+    },
+    {
+      "path": "/sm-contexts/{smContextRef}/release",
+      "method": "POST",
+      "responses": [
+        "200",
+        "204",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "default"
+      ]
+    },
+    {
+      "path": "/sm-contexts/{smContextRef}/send-mo-data",
+      "method": "POST",
+      "responses": [
+        "204",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "default"
+      ]
+    },
+    {
+      "path": "/pdu-sessions",
+      "method": "POST",
+      "responses": [
+        "201",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "504",
+        "default"
+      ]
+    },
+    {
+      "path": "/pdu-sessions/{pduSessionRef}/modify",
+      "method": "POST",
+      "responses": [
+        "200",
+        "204",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "default"
+      ]
+    },
+    {
+      "path": "/pdu-sessions/{pduSessionRef}/release",
+      "method": "POST",
+      "responses": [
+        "200",
+        "204",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "default"
+      ]
+    },
+    {
+      "path": "/pdu-sessions/{pduSessionRef}/retrieve",
+      "method": "POST",
+      "responses": [
+        "200",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "504",
+        "default"
+      ]
+    },
+    {
+      "path": "/pdu-sessions/{pduSessionRef}/transfer-mo-data",
+      "method": "POST",
+      "responses": [
+        "204",
+        "307",
+        "308",
+        "400",
+        "401",
+        "403",
+        "404",
+        "411",
+        "413",
+        "415",
+        "429",
+        "500",
+        "502",
+        "503",
+        "default"
+      ]
+    }
+  ],
+  "total_endpoints": 10
+}

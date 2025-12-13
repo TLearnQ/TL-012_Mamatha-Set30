@@ -1,0 +1,168 @@
+2025-12-13 09:08:57,362 | INFO | Starting service extraction
+2025-12-13 09:08:57,363 | INFO | Loading YAML: D:\3GPP_API_ASSIGNMENT\yamls\TS24283_Lms_Information.yaml
+2025-12-13 09:08:57,399 | INFO | Extracted endpoint: POST /requests
+2025-12-13 09:08:57,399 | INFO | Extracted endpoint: POST /subscriptions
+2025-12-13 09:08:57,399 | INFO | Extracted endpoint: PUT /subscriptions/{subscriptionId}
+2025-12-13 09:08:57,399 | INFO | Extracted endpoint: DELETE /subscriptions/{subscriptionId}
+2025-12-13 09:08:57,399 | INFO | Extracted endpoint: POST /configrequest
+2025-12-13 09:08:57,401 | INFO | Services saved
+2025-12-13 09:08:57,402 | INFO | Summary saved successfully
+2025-12-13 12:11:24,844 | INFO | Starting service extraction
+2025-12-13 12:11:24,844 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29502_Nsmf_PDUSession.yaml
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /sm-contexts
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/retrieve
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/modify
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/release
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/send-mo-data
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /pdu-sessions
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/modify
+2025-12-13 12:11:26,161 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/release
+2025-12-13 12:11:26,162 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/retrieve
+2025-12-13 12:11:26,162 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/transfer-mo-data
+2025-12-13 12:11:26,172 | INFO | Services saved
+2025-12-13 12:11:26,173 | INFO | Summary saved successfully
+2025-12-13 12:17:36,359 | INFO | Starting service extraction
+2025-12-13 12:17:36,360 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29502_Nsmf_PDUSession.yaml
+2025-12-13 12:17:39,613 | INFO | Extracted endpoint: POST /sm-contexts
+2025-12-13 12:17:39,613 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/retrieve
+2025-12-13 12:17:39,613 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/modify
+2025-12-13 12:17:39,613 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/release
+2025-12-13 12:17:39,613 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/send-mo-data
+2025-12-13 12:17:39,613 | INFO | Extracted endpoint: POST /pdu-sessions
+2025-12-13 12:17:39,614 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/modify
+2025-12-13 12:17:39,614 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/release
+2025-12-13 12:17:39,614 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/retrieve
+2025-12-13 12:17:39,614 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/transfer-mo-data
+2025-12-13 12:17:39,626 | INFO | Services saved
+2025-12-13 12:17:39,628 | INFO | Summary saved successfully
+2025-12-13 12:26:00,326 | INFO | Starting service extraction
+2025-12-13 12:26:00,326 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29502_Nudm_SDM.yaml
+2025-12-13 12:26:00,327 | ERROR | YAML file not found
+2025-12-13 12:27:03,899 | INFO | Starting service extraction
+2025-12-13 12:27:03,899 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29502_Nudm_SDM.yaml
+2025-12-13 12:27:03,900 | ERROR | YAML file not found
+2025-12-13 12:29:18,632 | INFO | Starting service extraction
+2025-12-13 12:29:18,632 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29502_Nsmf_PDUSession.yaml
+2025-12-13 12:29:19,617 | INFO | Extracted endpoint: POST /sm-contexts
+2025-12-13 12:29:19,617 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/retrieve
+2025-12-13 12:29:19,617 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/modify
+2025-12-13 12:29:19,617 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/release
+2025-12-13 12:29:19,617 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/send-mo-data
+2025-12-13 12:29:19,618 | INFO | Extracted endpoint: POST /pdu-sessions
+2025-12-13 12:29:19,618 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/modify
+2025-12-13 12:29:19,618 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/release
+2025-12-13 12:29:19,618 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/retrieve
+2025-12-13 12:29:19,619 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/transfer-mo-data
+2025-12-13 12:29:19,633 | INFO | Services saved
+2025-12-13 12:29:19,635 | INFO | Summary saved successfully
+2025-12-13 12:32:38,085 | INFO | Starting service extraction
+2025-12-13 12:32:38,085 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT\yamls\TS29507_Npcf_AMPolicyControl.yaml
+2025-12-13 12:32:38,246 | INFO | Extracted endpoint: POST /policies
+2025-12-13 12:32:38,246 | INFO | Extracted endpoint: GET /policies/{polAssoId}
+2025-12-13 12:32:38,247 | INFO | Extracted endpoint: DELETE /policies/{polAssoId}
+2025-12-13 12:32:38,247 | INFO | Extracted endpoint: POST /policies/{polAssoId}/update
+2025-12-13 12:32:38,248 | INFO | Services saved
+2025-12-13 12:32:38,250 | INFO | Summary saved successfully
+2025-12-13 12:35:08,556 | INFO | Starting service extraction
+2025-12-13 12:35:08,556 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT\yamls\TS29518_Namf_Communication.yaml
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: PUT /ue-contexts/{ueContextId}
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/release
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/assign-ebi
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/transfer
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/transfer-update
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/relocate
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/cancel-relocate
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/n1-n2-messages
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/n1-n2-messages/subscriptions
+2025-12-13 12:35:09,297 | INFO | Extracted endpoint: DELETE /ue-contexts/{ueContextId}/n1-n2-messages/subscriptions/{subscriptionId}
+2025-12-13 12:35:09,298 | INFO | Extracted endpoint: POST /non-ue-n2-messages/transfer
+2025-12-13 12:35:09,298 | INFO | Extracted endpoint: POST /non-ue-n2-messages/subscriptions
+2025-12-13 12:35:09,298 | INFO | Extracted endpoint: DELETE /non-ue-n2-messages/subscriptions/{n2NotifySubscriptionId}
+2025-12-13 12:35:09,298 | INFO | Extracted endpoint: POST /subscriptions
+2025-12-13 12:35:09,298 | INFO | Extracted endpoint: DELETE /subscriptions/{subscriptionId}
+2025-12-13 12:35:09,298 | INFO | Extracted endpoint: PUT /subscriptions/{subscriptionId}
+2025-12-13 12:35:09,308 | INFO | Services saved
+2025-12-13 12:35:09,310 | INFO | Summary saved successfully
+2025-12-13 12:35:13,139 | INFO | Starting service extraction
+2025-12-13 12:35:13,139 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT\yamls\TS29518_Namf_Communication.yaml
+2025-12-13 12:35:13,726 | INFO | Extracted endpoint: PUT /ue-contexts/{ueContextId}
+2025-12-13 12:35:13,726 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/release
+2025-12-13 12:35:13,726 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/assign-ebi
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/transfer
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/transfer-update
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/relocate
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/cancel-relocate
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/n1-n2-messages
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /ue-contexts/{ueContextId}/n1-n2-messages/subscriptions
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: DELETE /ue-contexts/{ueContextId}/n1-n2-messages/subscriptions/{subscriptionId}
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /non-ue-n2-messages/transfer
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /non-ue-n2-messages/subscriptions
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: DELETE /non-ue-n2-messages/subscriptions/{n2NotifySubscriptionId}
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: POST /subscriptions
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: DELETE /subscriptions/{subscriptionId}
+2025-12-13 12:35:13,727 | INFO | Extracted endpoint: PUT /subscriptions/{subscriptionId}
+2025-12-13 12:35:13,733 | INFO | Services saved
+2025-12-13 12:35:13,733 | INFO | Summary saved successfully
+2025-12-13 12:36:41,496 | INFO | Starting service extraction
+2025-12-13 12:36:41,496 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29531_Nnssf_NSSelection.yaml
+2025-12-13 12:36:41,574 | INFO | Extracted endpoint: GET /network-slice-information
+2025-12-13 12:36:41,576 | INFO | Services saved
+2025-12-13 12:36:41,577 | INFO | Summary saved successfully
+2025-12-13 12:38:25,429 | INFO | Starting service extraction
+2025-12-13 12:38:25,429 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29503_Nudm_SDM.yaml
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/nssai
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/ue-context-in-amf-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/am-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/am-data/ecr-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/smf-select-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/ue-context-in-smf-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/ue-context-in-smsf-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/trace-data
+2025-12-13 12:38:26,674 | INFO | Extracted endpoint: GET /{supi}/sm-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/sms-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/sms-mng-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{ueId}/lcs-privacy-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/lcs-mo-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/lcs-bca-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/lcs-subscription-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/v2x-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/prose-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/5mbs-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{supi}/uc-data
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: POST /{ueId}/sdm-subscriptions
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: DELETE /{ueId}/sdm-subscriptions/{subscriptionId}
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: PATCH /{ueId}/sdm-subscriptions/{subscriptionId}
+2025-12-13 12:38:26,675 | INFO | Extracted endpoint: GET /{ueId}/id-translation-result
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: PUT /{supi}/am-data/sor-ack
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: PUT /{supi}/am-data/upu-ack
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: PUT /{supi}/am-data/subscribed-snssais-ack
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: PUT /{supi}/am-data/cag-ack
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: POST /{supi}/am-data/update-sor
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: GET /shared-data
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: POST /shared-data-subscriptions
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: DELETE /shared-data-subscriptions/{subscriptionId}
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: PATCH /shared-data-subscriptions/{subscriptionId}
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: GET /group-data/group-identifiers
+2025-12-13 12:38:26,676 | INFO | Extracted endpoint: GET /shared-data/{sharedDataId}
+2025-12-13 12:38:26,677 | INFO | Extracted endpoint: GET /multiple-identifiers
+2025-12-13 12:38:26,677 | INFO | Extracted endpoint: GET /{supi}/time-sync-data
+2025-12-13 12:38:26,677 | INFO | Extracted endpoint: GET /{supi}/ranging-slpos-data
+2025-12-13 12:38:26,677 | INFO | Extracted endpoint: GET /{supi}/a2x-data
+2025-12-13 12:38:26,677 | INFO | Extracted endpoint: GET /{ueId}/rangingsl-privacy-data
+2025-12-13 12:38:26,693 | INFO | Services saved
+2025-12-13 12:38:26,698 | INFO | Summary saved successfully
+2025-12-13 12:47:35,516 | INFO | Starting service extraction
+2025-12-13 12:47:35,516 | INFO | Loading YAML: 3GPP_API_ASSIGNMENT/yamls/TS29502_Nsmf_PDUSession.yaml
+2025-12-13 12:47:36,324 | INFO | Extracted endpoint: POST /sm-contexts
+2025-12-13 12:47:36,324 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/retrieve
+2025-12-13 12:47:36,324 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/modify
+2025-12-13 12:47:36,324 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/release
+2025-12-13 12:47:36,325 | INFO | Extracted endpoint: POST /sm-contexts/{smContextRef}/send-mo-data
+2025-12-13 12:47:36,325 | INFO | Extracted endpoint: POST /pdu-sessions
+2025-12-13 12:47:36,325 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/modify
+2025-12-13 12:47:36,325 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/release
+2025-12-13 12:47:36,325 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/retrieve
+2025-12-13 12:47:36,325 | INFO | Extracted endpoint: POST /pdu-sessions/{pduSessionRef}/transfer-mo-data
+2025-12-13 12:47:36,337 | INFO | Services saved
+2025-12-13 12:47:36,340 | INFO | Summary saved successfully
